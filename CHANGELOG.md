@@ -26,6 +26,29 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.1] - 2023-06-14
+
+### Overview
+
+- Bug fixes
+- Dependency updates
+- GitHub Actions workflow updates
+- built using Go 1.19.10
+  - Statically linked
+  - Linux (x86, x64)
+  - Windows (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `golang.org/x/crypto`
+    - `v0.9.0` to `v0.10.0`
+- (GH-25) Add CodeQL workflow configuration
+
+### Fixed
+
+- (GH-26) Enable building of Windows assets
+
 ## [v0.1.0] - 2023-06-13
 
 ### Overview
@@ -34,7 +57,6 @@ The following types of changes will be recorded in this file:
 - built using Go 1.19.10
   - Statically linked
   - Linux (x86, x64)
-  - Windows (x86, x64)
 
 ### Added
 
@@ -49,5 +71,6 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.1.1...HEAD
+[v0.1.1]: https://github.com/atc0005/check-ssh/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.1.0
