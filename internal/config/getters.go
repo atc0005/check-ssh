@@ -9,9 +9,16 @@ package config
 
 import (
 	"strings"
+	"time"
 
 	"github.com/atc0005/go-nagios"
 )
+
+// Timeout converts the user-specified connection timeout value in seconds to
+// an appropriate time duration value for use with setting a timeout value.
+func (c Config) Timeout() time.Duration {
+	return time.Duration(c.timeout) * time.Second
+}
 
 // supportedLogLevels returns a list of valid log levels supported by tools in
 // this project.

@@ -25,6 +25,7 @@ const (
 	usernameFlagHelp    string = "The valid user for the given SSH server."
 	passwordFlagHelp    string = "The valid password for the specified user." //nolint:gosec
 	tcpPortFlagHelp     string = "The port used by the SSH service."
+	timeoutFlagHelp     string = "Timeout value in seconds allowed before a connection attempt to a SSH service is abandoned and an error returned."
 	networkTypeFlagHelp string = "Limits network connections to one of tcp4 (IPv4-only), tcp6 (IPv6-only) or auto (either)."
 	sshCommandFlagHelp  string = "The valid shell command to execute via SSH."
 )
@@ -75,6 +76,7 @@ const (
 	defaultTCPPort               int    = 22
 	defaultNetworkType           string = netTypeTCPAuto
 	defaultSSHCommand            string = ""
+	defaultTimeout               int    = 10
 	defaultLoginSuccessState     string = "ok"
 	defaultLoginFailureState     string = "critical"
 

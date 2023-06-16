@@ -82,6 +82,7 @@ func main() {
 		Password:      cfg.Password,
 		NetworkType:   cfg.NetworkType,
 		ClientVersion: config.SSHClientVersion(),
+		Timeout:       cfg.Timeout(),
 	}
 
 	client, session, loginErr := sshutils.LoginWithPasswordAuth(

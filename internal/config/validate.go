@@ -58,6 +58,16 @@ func (c Config) validate(_ AppType) error {
 		)
 	}
 
+	// 0 is a valid value; a value greater than zero indicates a timeout will
+	// be used, zero indicates that no timeout should be used.
+	if c.Timeout() < 0 {
+		return fmt.Errorf(
+			"invalid timeout value %d provided: %w",
+			c.Timeout(),
+			ErrUnsupportedOption,
+		)
+	}
+
 	// Validate the specified network type
 	supportedNetworkTypes := supportedNetworkTypes()
 	if !textutils.InList(c.NetworkType, supportedNetworkTypes, true) {

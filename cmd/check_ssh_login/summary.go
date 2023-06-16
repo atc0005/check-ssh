@@ -93,6 +93,13 @@ func setLongServiceOutput(extendedMessage string, client *ssh.Client, cfg *confi
 
 	fmt.Fprintf(
 		&report,
+		"* Timeout: %v%s",
+		cfg.Timeout(),
+		nagios.CheckOutputEOL,
+	)
+
+	fmt.Fprintf(
+		&report,
 		"* LoginFailureState: %v%s",
 		strings.ToUpper(cfg.LoginFailureState),
 		nagios.CheckOutputEOL,

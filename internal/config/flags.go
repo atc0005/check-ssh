@@ -65,6 +65,9 @@ func (c *Config) handleFlagsConfig(appType AppType) error {
 	case appType.Plugin:
 		c.flagSet.BoolVar(&c.ShowVerbose, VerboseFlagLong, defaultVerbose, verboseFlagHelp)
 
+		c.flagSet.IntVar(&c.timeout, TimeoutFlagShort, defaultTimeout, timeoutFlagHelp+" (shorthand)")
+		c.flagSet.IntVar(&c.timeout, TimeoutFlagLong, defaultTimeout, timeoutFlagHelp)
+
 		c.flagSet.StringVar(&c.SSHCommand, SSHCommandFlagLong, defaultSSHCommand, sshCommandFlagHelp)
 		c.flagSet.StringVar(
 			&c.LoginSuccessState,
