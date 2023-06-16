@@ -9,6 +9,7 @@ package sshutils
 
 import (
 	"errors"
+	"time"
 )
 
 // Known, named networks used for SSH connections. These names match the
@@ -87,4 +88,8 @@ type SSHPasswordAuthConfig struct {
 	// ClientVersion contains the version identification string that will be
 	// used for the connection. If empty, a reasonable default is used.
 	ClientVersion string
+
+	// Timeout is the maximum amount of time for the TCP connection to
+	// establish. A Timeout of zero means no timeout.
+	Timeout time.Duration
 }

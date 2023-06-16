@@ -108,6 +108,10 @@ type Config struct {
 	// TCPPort is the port used by the SSH service.
 	TCPPort int
 
+	// timeout is the number of seconds allowed before the connection attempt
+	// to the SSH service is abandoned and an error returned.
+	timeout int
+
 	// Log is an embedded zerolog Logger initialized via config.New().
 	Log zerolog.Logger
 

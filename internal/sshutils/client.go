@@ -116,6 +116,7 @@ func LoginWithPasswordAuth(
 		User:          sshPasswordAuthConfig.Username,
 		Auth:          []ssh.AuthMethod{ssh.Password(sshPasswordAuthConfig.Password)},
 		ClientVersion: sshPasswordAuthConfig.ClientVersion,
+		Timeout:       sshPasswordAuthConfig.Timeout,
 	}
 	// TODO: Implement support for using a given host key to validate the SSH
 	// server.
