@@ -26,6 +26,27 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.0] - 2023-06-20
+
+### Overview
+
+- Add new flag
+- Dependency updates
+- built using Go 1.19.10
+  - Statically linked
+  - Linux (x86, x64)
+  - Windows (x86, x64)
+
+### Added
+
+- (GH-30) Add support for setting custom timeout
+
+### Changed
+
+- Dependencies
+  - `atc0005/go-ci`
+    - `go-ci-oldstable-build-v0.10.6` to `go-ci-oldstable-build-v0.11.0`
+
 ## [v0.1.1] - 2023-06-14
 
 ### Overview
@@ -71,6 +92,7 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.2.0...HEAD
+[v0.2.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.2.0
 [v0.1.1]: https://github.com/atc0005/check-ssh/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.1.0
