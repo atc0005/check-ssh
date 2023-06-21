@@ -64,6 +64,7 @@ func (c *Config) handleFlagsConfig(appType AppType) error {
 	case appType.Inspector:
 	case appType.Plugin:
 		c.flagSet.BoolVar(&c.ShowVerbose, VerboseFlagLong, defaultVerbose, verboseFlagHelp)
+		c.flagSet.BoolVar(&c.EmitSSHCommandOutput, SSHCommandOutputFlagLong, defaultEmitSSHCommandOutput, sshCommandOutputFlagHelp)
 
 		c.flagSet.IntVar(&c.timeout, TimeoutFlagShort, defaultTimeout, timeoutFlagHelp+" (shorthand)")
 		c.flagSet.IntVar(&c.timeout, TimeoutFlagLong, defaultTimeout, timeoutFlagHelp)

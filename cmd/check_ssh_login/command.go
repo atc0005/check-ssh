@@ -40,6 +40,14 @@ func sshCommandSummary(cmdOutput []byte, cfg *config.Config) string {
 	escapedOutput = strings.ReplaceAll(escapedOutput, `\`, `/`)
 
 	switch {
+	case !cfg.EmitSSHCommandOutput:
+		sshCommandSummary = fmt.Sprintf(
+			"SSH command: %q%s%sSSH command output: Disabled%s",
+			cfg.SSHCommand,
+			nagios.CheckOutputEOL,
+			nagios.CheckOutputEOL,
+			nagios.CheckOutputEOL,
+		)
 	case strings.TrimSpace(string(cmdOutput)) != "":
 		sshCommandSummary = fmt.Sprintf(
 			"SSH command: %q%s%sSSH command output: %s%s%s%s",
