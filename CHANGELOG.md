@@ -26,6 +26,20 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.0] - 2023-06-21
+
+### Overview
+
+- Add new flag
+- built using Go 1.19.10
+  - Statically linked
+  - Linux (x86, x64)
+  - Windows (x86, x64)
+
+### Added
+
+- (GH-34) Allow toggling SSH command output on/off
+
 ## [v0.2.0] - 2023-06-20
 
 ### Overview
@@ -92,7 +106,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.0...HEAD
+[v0.3.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.0
 [v0.2.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.2.0
 [v0.1.1]: https://github.com/atc0005/check-ssh/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.1.0
