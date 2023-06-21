@@ -126,6 +126,10 @@ type Config struct {
 	// their own branding output.
 	EmitBranding bool
 
+	// EmitSSHCommandOutput controls whether SSH command output is emitted by
+	// the plugin *if* a SSH command was specified and executed.
+	EmitSSHCommandOutput bool
+
 	// ShowVersion is a flag indicating whether the user opted to display only
 	// the version string and then immediately exit the application.
 	ShowVersion bool

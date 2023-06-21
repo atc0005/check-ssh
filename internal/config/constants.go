@@ -17,17 +17,18 @@ const ExitCodeCatchall int = 1
 
 // Shared flags help text.
 const (
-	versionFlagHelp     string = "Whether to display application version and then immediately exit application."
-	logLevelFlagHelp    string = "Sets log level."
-	brandingFlagHelp    string = "Toggles emission of branding details with plugin status details. This output is disabled by default."
-	helpFlagHelp        string = "Emit this help text"
-	serverFlagHelp      string = "The SSH server FQDN or IP Address."
-	usernameFlagHelp    string = "The valid user for the given SSH server."
-	passwordFlagHelp    string = "The valid password for the specified user." //nolint:gosec
-	tcpPortFlagHelp     string = "The port used by the SSH service."
-	timeoutFlagHelp     string = "Timeout value in seconds allowed before a connection attempt to a SSH service is abandoned and an error returned."
-	networkTypeFlagHelp string = "Limits network connections to one of tcp4 (IPv4-only), tcp6 (IPv6-only) or auto (either)."
-	sshCommandFlagHelp  string = "The valid shell command to execute via SSH."
+	versionFlagHelp          string = "Whether to display application version and then immediately exit application."
+	logLevelFlagHelp         string = "Sets log level."
+	brandingFlagHelp         string = "Toggles emission of branding details with plugin status details. This output is disabled by default."
+	helpFlagHelp             string = "Emit this help text"
+	serverFlagHelp           string = "The SSH server FQDN or IP Address."
+	usernameFlagHelp         string = "The valid user for the given SSH server."
+	passwordFlagHelp         string = "The valid password for the specified user." //nolint:gosec
+	tcpPortFlagHelp          string = "The port used by the SSH service."
+	timeoutFlagHelp          string = "Timeout value in seconds allowed before a connection attempt to a SSH service is abandoned and an error returned."
+	networkTypeFlagHelp      string = "Limits network connections to one of tcp4 (IPv4-only), tcp6 (IPv6-only) or auto (either)."
+	sshCommandFlagHelp       string = "The valid shell command to execute via SSH."
+	sshCommandOutputFlagHelp string = "Toggles emission of SSH command output (if a SSH command is executed). This output is disabled by default."
 )
 
 // Plugin flags help text.
@@ -60,6 +61,7 @@ const (
 	PortFlagLong              string = "port"
 	NetTypeFlagLong           string = "net-type"
 	SSHCommandFlagLong        string = "command"
+	SSHCommandOutputFlagLong  string = "command-output"
 )
 
 // Default flag settings if not overridden by user input
@@ -68,6 +70,7 @@ const (
 	defaultLogLevel              string = "info"
 	defaultVerbose               bool   = false
 	defaultEmitBranding          bool   = false
+	defaultEmitSSHCommandOutput  bool   = false
 	defaultDisplayVersionAndExit bool   = false
 	defaultShowAllProcesses      bool   = false
 	defaultServer                string = ""
