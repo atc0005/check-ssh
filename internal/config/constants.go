@@ -72,7 +72,6 @@ const (
 	defaultEmitBranding          bool   = false
 	defaultEmitSSHCommandOutput  bool   = false
 	defaultDisplayVersionAndExit bool   = false
-	defaultShowAllProcesses      bool   = false
 	defaultServer                string = ""
 	defaultUsername              string = ""
 	defaultPassword              string = ""
