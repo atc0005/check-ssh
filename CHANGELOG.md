@@ -26,6 +26,30 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.1] - 2023-06-30
+
+### Overview
+
+- Bug fixes
+- Dependency updates
+- built using Go 1.19.10
+  - Statically linked
+  - Linux (x86, x64)
+  - Windows (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `atc0005/go-ci`
+    - `go-ci-oldstable-build-v0.11.0` to `go-ci-oldstable-build-v0.11.1`
+  - `atc0005/go-nagios`
+    - `v0.15.0` to `v0.16.0`
+
+### Fixed
+
+- (GH-40) Removed unused config constant
+- (GH-41) Fix logger field label for username value
+
 ## [v0.3.0] - 2023-06-21
 
 ### Overview
@@ -106,7 +130,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.1...HEAD
+[v0.3.1]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.1
 [v0.3.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.0
 [v0.2.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.2.0
 [v0.1.1]: https://github.com/atc0005/check-ssh/releases/tag/v0.1.1
