@@ -110,7 +110,7 @@ func main() {
 		logger.Error().
 			Err(sshutils.ErrAuthenticationSucceeded).
 			Str("server", cfg.Server).
-			Str("server", cfg.Username).
+			Str("username", cfg.Username).
 			Int("port", cfg.TCPPort).
 			Str("net_type", cfg.NetworkType).
 			Msg("Successfully authenticated to SSH server (UNEXPECTED)")
@@ -133,7 +133,7 @@ func main() {
 
 	logger.Debug().
 		Str("server", cfg.Server).
-		Str("server", cfg.Username).
+		Str("username", cfg.Username).
 		Int("port", cfg.TCPPort).
 		Str("net_type", cfg.NetworkType).
 		Str("client_version", string(client.Conn.ClientVersion())).
