@@ -58,7 +58,13 @@ func (c *Config) handleFlagsConfig(appType AppType) error {
 	c.flagSet.StringVar(&c.Username, UsernameFlagLong, defaultUsername, usernameFlagHelp)
 	c.flagSet.StringVar(&c.Password, PasswordFlagLong, defaultPassword, passwordFlagHelp)
 	c.flagSet.IntVar(&c.TCPPort, PortFlagLong, defaultTCPPort, tcpPortFlagHelp)
-	c.flagSet.StringVar(&c.NetworkType, NetTypeFlagLong, defaultNetworkType, networkTypeFlagHelp)
+
+	c.flagSet.StringVar(
+		&c.NetworkType,
+		NetTypeFlagLong,
+		defaultNetworkType,
+		supportedValuesFlagHelpText(networkTypeFlagHelp, supportedNetworkTypes()),
+	)
 
 	switch {
 	case appType.Inspector:
