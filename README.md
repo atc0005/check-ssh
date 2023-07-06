@@ -81,7 +81,7 @@ results.
   - default behavior is `auto`
 
 - Optional, leveled logging using `rs/zerolog` package
-  - JSON-format output (to `stderr`)
+  - [`logfmt`][logfmt] format output (to `stderr`)
   - choice of `disabled`, `panic`, `fatal`, `error`, `warn`, `info` (the
     default), `debug` or `trace`
 
@@ -613,3 +613,5 @@ See the [LICENSE](LICENSE) file for details.
 [go-supported-releases]: <https://go.dev/doc/devel/release#policy> "Go Release Policy"
 
 [nagios-illegal-macro-chars]: <https://serverfault.com/questions/242357/need-to-have-illegal-characters-in-nagios-serviceoutput-and-longserviceoutput> "Nagios Illegal Macro Output Characters"
+
+[logfmt]: <https://brandur.org/logfmt>
