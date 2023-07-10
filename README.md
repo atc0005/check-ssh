@@ -14,6 +14,7 @@ Go-based tooling used to monitor SSH access.
 
 - [Project home](#project-home)
 - [Overview](#overview)
+  - [Performance Data](#performance-data)
 - [Features](#features)
   - [`check_ssh_login` plugin](#check_ssh_login-plugin)
 - [Changelog](#changelog)
@@ -52,6 +53,23 @@ This repo is intended to provide various tools used to monitor SSH access.
 | Tool Name         | Overall Status | Description                                                     |
 | ----------------- | -------------- | --------------------------------------------------------------- |
 | `check_ssh_login` | Alpha          | Nagios plugin used to monitor for unexpected SSH login results. |
+
+### Performance Data
+
+Initial support has been added for emitting Performance Data / Metrics, but
+refinement suggestions are welcome.
+
+Consult the table below for the metrics implemented thus far.
+
+Please add to an existing
+[Discussion](https://github.com/atc0005/check-ssh/discussions) thread
+(if applicable) or [open a new
+one](https://github.com/atc0005/check-ssh/discussions/new) with any
+feedback that you may have. Thanks in advance!
+
+| Emitted Performance Data / Metric | Meaning            |
+| --------------------------------- | ------------------ |
+| `time`                            | Runtime for plugin |
 
 ## Features
 
