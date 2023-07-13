@@ -26,6 +26,37 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.2] - 2023-07-13
+
+### Overview
+
+- RPM package improvements
+- Bug fixes
+- Dependency updates
+- built using Go 1.19.11
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.19.10` to `1.19.11`
+  - `atc0005/go-ci`
+    - `go-ci-oldstable-build-v0.11.1` to `go-ci-oldstable-build-v0.11.3`
+  - `golang.org/x/crypto`
+    - `v0.10.0` to `v0.11.0`
+  - `golang.org/x/sys`
+    - `v0.9.0` to `v0.10.0`
+- (GH-44) List supported network types in flag help text
+- (GH-50) Update RPM postinstall scripts to use restorecon
+
+### Fixed
+
+- (GH-47) README missing performance data metrics table
+- (GH-48) Correct logging format listed in README
+
 ## [v0.3.1] - 2023-06-30
 
 ### Overview
@@ -130,7 +161,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.2...HEAD
+[v0.3.2]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.2
 [v0.3.1]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.1
 [v0.3.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.0
 [v0.2.0]: https://github.com/atc0005/check-ssh/releases/tag/v0.2.0
