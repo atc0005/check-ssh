@@ -15,6 +15,10 @@ const myAppURL string = "https://github.com/atc0005/check-ssh"
 // See https://tldp.org/LDP/abs/html/exitcodes.html for additional details.
 const ExitCodeCatchall int = 1
 
+// shorthandFlagSuffix is appended to short flag help text to emphasize that
+// the flag is a shorthand version of a longer flag.
+const shorthandFlagSuffix = " (shorthand)"
+
 // Shared flags help text.
 const (
 	versionFlagHelp          string = "Whether to display application version and then immediately exit application."
