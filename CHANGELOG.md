@@ -26,6 +26,27 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.5] - 2023-11-15
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-138) canary: bump golang from 1.20.10 to 1.20.11 in /dependabot/docker/go
+- (GH-128) canary: bump golang from 1.20.8 to 1.20.10 in /dependabot/docker/go
+- (GH-129) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.13.10 to go-ci-oldstable-build-v0.13.12 in /dependabot/docker/builds
+- (GH-143) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.13.12 to go-ci-oldstable-build-v0.14.1 in /dependabot/docker/builds
+- (GH-132) go.mod: bump github.com/mattn/go-isatty from 0.0.19 to 0.0.20
+- (GH-115) go.mod: bump github.com/rs/zerolog from 1.30.0 to 1.31.0
+- (GH-120) go.mod: bump golang.org/x/crypto from 0.13.0 to 0.14.0
+- (GH-140) go.mod: bump golang.org/x/crypto from 0.14.0 to 0.15.0
+- (GH-119) go.mod: bump golang.org/x/sys from 0.12.0 to 0.13.0
+- (GH-136) go.mod: bump golang.org/x/sys from 0.13.0 to 0.14.0
+
+### Fixed
+
+- (GH-145) Fix goconst linting errors
+
 ## [v0.3.4] - 2023-10-06
 
 ### Changed
@@ -201,7 +222,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.4...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.5...HEAD
+[v0.3.5]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.5
 [v0.3.4]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.4
 [v0.3.3]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.3
 [v0.3.2]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.2
