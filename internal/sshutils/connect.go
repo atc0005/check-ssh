@@ -8,6 +8,7 @@
 package sshutils
 
 import (
+	"context"
 	"fmt"
 	"net"
 	"strconv"
@@ -23,7 +24,7 @@ import (
 // openConnection receives a list of IP Addresses and returns a net.Conn value
 // for the first successful connection attempt. An error is returned instead
 // if one occurs.
-func openConnection(addrs []string, port int, netType string, logger zerolog.Logger) (net.Conn, error) {
+func openConnection(ctx context.Context, addrs []string, port int, netType string, logger zerolog.Logger) (net.Conn, error) {
 	if len(addrs) < 1 {
 		logger.Error().Msg("empty list of IP Addresses received")
 
@@ -55,7 +56,8 @@ func openConnection(addrs []string, port int, netType string, logger zerolog.Log
 		}
 
 		// Attempt to connect to the given IP Address.
-		c, connectErr = net.Dial(netType, s)
+		dialer := &net.Dialer{}
+		c, connectErr = dialer.DialContext(ctx, netType, s)
 
 		// pass in explicitly set SSH config using provided server name, but
 		// attempt to connect to specific IP Address returned from earlier
@@ -119,8 +121,10 @@ func networkTypeToIPTypeStr(netType string) string {
 	}
 }
 
-func lookupIPs(server string, logger zerolog.Logger) ([]string, error) {
-	lookupResults, lookupErr := net.LookupHost(server)
+func lookupIPs(ctx context.Context, server string, logger zerolog.Logger) ([]string, error) {
+	resolver := &net.Resolver{}
+	lookupResults, lookupErr := resolver.LookupHost(ctx, server)
+
 	if lookupErr != nil {
 		logger.Error().
 			Err(lookupErr).
@@ -309,8 +313,8 @@ func filterNetIPsToNetworkType(netIPs []net.IP, netType string, logger zerolog.L
 	return filteredIPs, nil
 }
 
-func resolveIPAddresses(sshPasswordAuthConfig SSHPasswordAuthConfig, logger zerolog.Logger) ([]string, error) {
-	lookupResults, lookupErr := lookupIPs(sshPasswordAuthConfig.Server, logger)
+func resolveIPAddresses(ctx context.Context, sshPasswordAuthConfig SSHPasswordAuthConfig, logger zerolog.Logger) ([]string, error) {
+	lookupResults, lookupErr := lookupIPs(ctx, sshPasswordAuthConfig.Server, logger)
 	if lookupErr != nil {
 		return nil, lookupErr
 	}
