@@ -8,6 +8,7 @@
 package sshutils
 
 import (
+	"context"
 	"fmt"
 	"net"
 	"strings"
@@ -19,7 +20,7 @@ import (
 // newClient opens a connection to the specified SSH server using the
 // specified authentication details, network type. A connected client is
 // returned or an error if one occurs.
-func newClient(sshPasswordAuthConfig SSHPasswordAuthConfig, sshConfig *ssh.ClientConfig, logger zerolog.Logger) (*ssh.Client, error) {
+func newClient(ctx context.Context, sshPasswordAuthConfig SSHPasswordAuthConfig, sshConfig *ssh.ClientConfig, logger zerolog.Logger) (*ssh.Client, error) {
 	logger = logger.With().
 		Str("hostname", sshPasswordAuthConfig.Server).
 		Str("net_type", sshPasswordAuthConfig.NetworkType).
@@ -27,7 +28,7 @@ func newClient(sshPasswordAuthConfig SSHPasswordAuthConfig, sshConfig *ssh.Clien
 
 	logger.Debug().Msg("resolving hostname")
 
-	addrs, err := resolveIPAddresses(sshPasswordAuthConfig, logger)
+	addrs, err := resolveIPAddresses(ctx, sshPasswordAuthConfig, logger)
 	if err != nil {
 		return nil, fmt.Errorf(
 			"resolve hostname %s to %s IPs: %w",
@@ -38,6 +39,7 @@ func newClient(sshPasswordAuthConfig SSHPasswordAuthConfig, sshConfig *ssh.Clien
 	}
 
 	conn, connectErr := openConnection(
+		ctx,
 		addrs,
 		sshPasswordAuthConfig.Port,
 		sshPasswordAuthConfig.NetworkType,
@@ -91,6 +93,7 @@ func newClient(sshPasswordAuthConfig SSHPasswordAuthConfig, sshConfig *ssh.Clien
 // pointers to a SSH client and session are returned, otherwise an error is
 // returned.
 func LoginWithPasswordAuth(
+	ctx context.Context,
 	sshPasswordAuthConfig SSHPasswordAuthConfig,
 	logger zerolog.Logger,
 ) (*ssh.Client, *ssh.Session, error) {
@@ -124,7 +127,7 @@ func LoginWithPasswordAuth(
 	// sshConfig.HostKeyCallback = ssh.FixedHostKey()
 	sshConfig.HostKeyCallback = ssh.InsecureIgnoreHostKey() // nolint:gosec
 
-	client, err := newClient(sshPasswordAuthConfig, sshConfig, logger)
+	client, err := newClient(ctx, sshPasswordAuthConfig, sshConfig, logger)
 	if err != nil {
 		return nil, nil, fmt.Errorf(
 			"failed to login to %s: %w",
