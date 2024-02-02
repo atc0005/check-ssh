@@ -26,6 +26,21 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.8] - 2024-02-02
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-176) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.14.3 to go-ci-oldstable-build-v0.14.4 in /dependabot/docker/builds
+- (GH-182) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.14.4 to go-ci-oldstable-build-v0.14.5 in /dependabot/docker/builds
+- (GH-186) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.14.5 to go-ci-oldstable-build-v0.14.6 in /dependabot/docker/builds
+- (GH-181) go.mod: bump github.com/atc0005/go-nagios from 0.16.0 to 0.16.1
+
+### Fixed
+
+- (GH-188) Add missing context usage
+
 ## [v0.3.7] - 2024-01-19
 
 ### Changed
@@ -245,7 +260,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.7...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.8...HEAD
+[v0.3.8]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.8
 [v0.3.7]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.7
 [v0.3.6]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.6
 [v0.3.5]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.5
