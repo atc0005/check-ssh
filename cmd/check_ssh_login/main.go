@@ -10,10 +10,12 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/atc0005/check-ssh/internal/config"
 	"github.com/atc0005/check-ssh/internal/sshutils"
@@ -75,6 +77,12 @@ func main() {
 
 	logger := cfg.Log.With().Logger()
 
+	// Set context deadline equal to user-specified timeout value for
+	// runtime/execution.
+	ctx, cancel := context.WithTimeout(context.Background(), cfg.Timeout())
+	defer cancel()
+
+	deadline, _ := ctx.Deadline()
 	sshPasswordAuthConfig := sshutils.SSHPasswordAuthConfig{
 		Server:        cfg.Server,
 		Port:          cfg.TCPPort,
@@ -82,10 +90,11 @@ func main() {
 		Password:      cfg.Password,
 		NetworkType:   cfg.NetworkType,
 		ClientVersion: config.SSHClientVersion(),
-		Timeout:       cfg.Timeout(),
+		Timeout:       time.Until(deadline),
 	}
 
 	client, session, loginErr := sshutils.LoginWithPasswordAuth(
+		ctx,
 		sshPasswordAuthConfig,
 		logger,
 	)
