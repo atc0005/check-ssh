@@ -26,6 +26,19 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.9] - 2024-02-20
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-201) canary: bump golang from 1.20.13 to 1.20.14 in /dependabot/docker/go
+- (GH-203) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.14.6 to go-ci-oldstable-build-v0.14.9 in /dependabot/docker/builds
+- (GH-207) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.14.9 to go-ci-oldstable-build-v0.15.0 in /dependabot/docker/builds
+- (GH-192) go.mod: bump github.com/rs/zerolog from 1.31.0 to 1.32.0
+- (GH-200) go.mod: bump golang.org/x/crypto from 0.18.0 to 0.19.0
+- (GH-199) go.mod: bump golang.org/x/sys from 0.16.0 to 0.17.0
+
 ## [v0.3.8] - 2024-02-02
 
 ### Changed
@@ -260,7 +273,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.8...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.9...HEAD
+[v0.3.9]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.9
 [v0.3.8]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.8
 [v0.3.7]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.7
 [v0.3.6]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.6
