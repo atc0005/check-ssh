@@ -26,6 +26,25 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.10] - 2024-03-08
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-228) Add todo/release label to "Go Runtime" PRs
+- (GH-217) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.15.2 to go-ci-oldstable-build-v0.15.3 in /dependabot/docker/builds
+- (GH-226) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.15.3 to go-ci-oldstable-build-v0.15.4 in /dependabot/docker/builds
+- (GH-213) canary: bump golang from 1.21.6 to 1.21.7 in /dependabot/docker/go
+- (GH-209) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.15.0 to go-ci-oldstable-build-v0.15.2 in /dependabot/docker/builds
+- (GH-219) Go Dependency: Bump golang.org/x/crypto from 0.19.0 to 0.20.0
+- (GH-221) Go Dependency: Bump golang.org/x/crypto from 0.20.0 to 0.21.0
+- (GH-220) Go Dependency: Bump golang.org/x/sys from 0.17.0 to 0.18.0
+- (GH-225) Go Runtime: Bump golang from 1.21.7 to 1.21.8 in /dependabot/docker/go
+- (GH-215) Update Dependabot PR prefixes (redux)
+- (GH-214) Update Dependabot PR prefixes
+- (GH-210) Update project to Go 1.21 series
+
 ## [v0.3.9] - 2024-02-20
 
 ### Changed
@@ -273,7 +292,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.9...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.10...HEAD
+[v0.3.10]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.10
 [v0.3.9]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.9
 [v0.3.8]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.8
 [v0.3.7]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.7
