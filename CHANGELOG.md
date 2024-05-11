@@ -26,6 +26,19 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.12] - 2024-05-11
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-252) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.20.1 to go-ci-oldstable-build-v0.20.2 in /dependabot/docker/builds
+- (GH-262) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.20.2 to go-ci-oldstable-build-v0.20.3 in /dependabot/docker/builds
+- (GH-263) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.20.3 to go-ci-oldstable-build-v0.20.4 in /dependabot/docker/builds
+- (GH-257) Go Dependency: Bump golang.org/x/crypto from 0.22.0 to 0.23.0
+- (GH-253) Go Dependency: Bump golang.org/x/sys from 0.19.0 to 0.20.0
+- (GH-259) Go Runtime: Bump golang from 1.21.9 to 1.21.10 in /dependabot/docker/go
+
 ## [v0.3.11] - 2024-04-11
 
 ### Changed
@@ -307,7 +320,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.11...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.12...HEAD
+[v0.3.12]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.12
 [v0.3.11]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.11
 [v0.3.10]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.10
 [v0.3.9]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.9
