@@ -55,7 +55,7 @@ func setLongServiceOutput(extendedMessage string, client *ssh.Client, cfg *confi
 	// 	nagios.CheckOutputEOL,
 	// )
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"%sConfiguration settings: %s%s",
 		nagios.CheckOutputEOL,
@@ -63,49 +63,49 @@ func setLongServiceOutput(extendedMessage string, client *ssh.Client, cfg *confi
 		nagios.CheckOutputEOL,
 	)
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"* Server: %v%s",
 		cfg.Server,
 		nagios.CheckOutputEOL,
 	)
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"* Port: %v%s",
 		cfg.TCPPort,
 		nagios.CheckOutputEOL,
 	)
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"* Username: %v%s",
 		cfg.Username,
 		nagios.CheckOutputEOL,
 	)
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"* NetworkType: %v%s",
 		cfg.NetworkType,
 		nagios.CheckOutputEOL,
 	)
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"* Timeout: %v%s",
 		cfg.Timeout(),
 		nagios.CheckOutputEOL,
 	)
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"* LoginFailureState: %v%s",
 		strings.ToUpper(cfg.LoginFailureState),
 		nagios.CheckOutputEOL,
 	)
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"* LoginSuccessState: %v%s",
 		strings.ToUpper(cfg.LoginSuccessState),
@@ -113,7 +113,7 @@ func setLongServiceOutput(extendedMessage string, client *ssh.Client, cfg *confi
 	)
 
 	if extendedMessage != "" {
-		fmt.Fprintf(
+		_, _ = fmt.Fprintf(
 			&report,
 			"%s------%s%s",
 			nagios.CheckOutputEOL,
@@ -121,7 +121,7 @@ func setLongServiceOutput(extendedMessage string, client *ssh.Client, cfg *confi
 			nagios.CheckOutputEOL,
 		)
 
-		fmt.Fprintf(
+		_, _ = fmt.Fprintf(
 			&report,
 			"%s%s",
 			nagios.CheckOutputEOL,
@@ -129,7 +129,7 @@ func setLongServiceOutput(extendedMessage string, client *ssh.Client, cfg *confi
 		)
 	}
 
-	fmt.Fprintf(
+	_, _ = fmt.Fprintf(
 		&report,
 		"%s",
 		nagios.CheckOutputEOL,
@@ -137,13 +137,13 @@ func setLongServiceOutput(extendedMessage string, client *ssh.Client, cfg *confi
 
 	if cfg.ShowVerbose {
 		if client != nil {
-			fmt.Fprintf(
+			_, _ = fmt.Fprintf(
 				&report,
 				"SSH Client version: %s%s",
 				client.ClientVersion(),
 				nagios.CheckOutputEOL,
 			)
-			fmt.Fprintf(
+			_, _ = fmt.Fprintf(
 				&report,
 				"SSH Server version: %s%s",
 				client.ServerVersion(),
