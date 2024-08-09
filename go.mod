@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/atc0005/go-nagios v0.16.1
 	github.com/rs/zerolog v1.33.0
-	golang.org/x/crypto v0.25.0
+	golang.org/x/crypto v0.26.0
 )
 
 require (
