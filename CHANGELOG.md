@@ -26,6 +26,23 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.3.19] - 2025-04-16
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-457) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.18 to go-ci-oldstable-build-v0.22.9 in /dependabot/docker/builds
+- (GH-459) Disable Dependabot automatic PR rebasing
+- (GH-407) Go Dependency: Bump github.com/mattn/go-colorable from 0.1.13 to 0.1.14
+- (GH-451) Go Dependency: Bump github.com/rs/zerolog from 1.33.0 to 1.34.0
+- (GH-400) Go Dependency: Bump golang.org/x/crypto from 0.30.0 to 0.31.0
+- (GH-464) Go Dependency: Bump golang.org/x/crypto from 0.31.0 to 0.37.0
+- (GH-463) Go Dependency: Bump golang.org/x/sys from 0.28.0 to 0.32.0
+- (GH-456) Go Runtime: Bump golang from 1.22.10 to 1.23.8 in /dependabot/docker/go
+- (GH-448) go.mod: update minimum Go version to 1.23.0
+- (GH-435) Update project to Go 1.23 series
+
 ## [v0.3.18] - 2024-12-06
 
 ### Changed
@@ -415,7 +432,8 @@ access:
 
 See the project README for additional details.
 
-[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.18...HEAD
+[Unreleased]: https://github.com/atc0005/check-ssh/compare/v0.3.19...HEAD
+[v0.3.19]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.19
 [v0.3.18]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.18
 [v0.3.17]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.17
 [v0.3.16]: https://github.com/atc0005/check-ssh/releases/tag/v0.3.16
