@@ -3,7 +3,7 @@ module github.com/atc0005/check-ssh
 go 1.23.0
 
 require (
-	github.com/atc0005/go-nagios v0.19.0
+	github.com/atc0005/go-nagios v0.20.0
 	github.com/rs/zerolog v1.34.0
 	golang.org/x/crypto v0.37.0
 )
