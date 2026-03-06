@@ -212,9 +212,9 @@ func Usage(flagSet *flag.FlagSet, w io.Writer) func() {
 	// will have a chance to also override the output destination.
 	flag.CommandLine.SetOutput(w)
 
-	switch {
+	switch flagSet {
 	// Uninitialized flagset, provide stub usage information.
-	case flagSet == nil:
+	case nil:
 		return func() {
 			_, _ = fmt.Fprintln(w, "Failed to initialize configuration; nil FlagSet")
 		}
